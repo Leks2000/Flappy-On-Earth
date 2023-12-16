@@ -7,7 +7,8 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private SpriteRenderer rightWall;
     [SerializeField] private Text coinText;
     [SerializeField] private GameObject gameOverCanvas;
-
+    [SerializeField] private int speed;
+    private Rigidbody2D rb;
 
     private int coins = 0;
     private bool gameOver;
@@ -15,6 +16,7 @@ public class MovePlayer : MonoBehaviour
     private void Start()
     {
         SetPosition();
+        rb = GetComponent<Rigidbody2D>();
         gameOverCanvas.SetActive(false);
     }
 
@@ -22,6 +24,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (!gameOver)
         {
+            rb.MovePosition(rb.position + new Vector2(0, 1) * speed * Time.fixedDeltaTime);
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);

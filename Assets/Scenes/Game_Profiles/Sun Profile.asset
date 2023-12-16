@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4519927087846744491
+--- !u!114 &-3343347654178857694
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,41 +9,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
-  m_Name: Vignette
+  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
+  m_Name: AutoExposure
   m_EditorClassIdentifier: 
   active: 1
   enabled:
     overrideState: 1
     value: 1
-  mode:
+  filtering:
     overrideState: 1
-    value: 1
-  color:
+    value: {x: 53.99999, y: 99}
+  minLuminance:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
-  center:
-    overrideState: 0
-    value: {x: 0.5, y: 0.5}
-  intensity:
-    overrideState: 0
     value: 0
-  smoothness:
-    overrideState: 0
-    value: 0.2
-  roundness:
+  maxLuminance:
+    overrideState: 1
+    value: 0
+  keyValue:
     overrideState: 0
     value: 1
-  rounded:
+  eyeAdaptation:
     overrideState: 0
     value: 0
-  mask:
-    overrideState: 1
-    value: {fileID: -8328923581568760697, guid: 1a5788ca4753b6c43a89a20686d34f92, type: 3}
-    defaultState: 1
-  opacity:
-    overrideState: 1
-    value: 0
+  speedUp:
+    overrideState: 0
+    value: 2
+  speedDown:
+    overrideState: 0
+    value: 1
 --- !u!114 &-811593093176201250
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1370,7 +1363,7 @@ MonoBehaviour:
   settings:
   - {fileID: 553310500368789813}
   - {fileID: -811593093176201250}
-  - {fileID: -4519927087846744491}
+  - {fileID: -3343347654178857694}
 --- !u!114 &553310500368789813
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1392,29 +1385,29 @@ MonoBehaviour:
     value: 10
   threshold:
     overrideState: 1
-    value: 0.85
+    value: 1
   softKnee:
     overrideState: 1
-    value: 0
+    value: 0.5
   clamp:
     overrideState: 0
     value: 65
   diffusion:
-    overrideState: 1
-    value: 1.81
+    overrideState: 0
+    value: 2
   anamorphicRatio:
     overrideState: 0
     value: -1
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 0.981875, b: 0, a: 1}
   fastMode:
     overrideState: 0
     value: 0
   dirtTexture:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0
