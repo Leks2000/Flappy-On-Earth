@@ -2,7 +2,8 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private MovePlayer player;
+    [Tooltip("Слежение камеры")]
+    [SerializeField] private PlayerController player;
     [SerializeField] private float xOffset;
 
     private void Update()

@@ -1,23 +1,46 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MovePlayer : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [Header("Sprite Settings")]
     [SerializeField] private SpriteRenderer leftWall;
     [SerializeField] private SpriteRenderer rightWall;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [Tooltip("Все скины на игрока")]
+    [SerializeField] private List<Sprite> characterSprites;
+    [Space]
+    [Header("UI Settings")]
+    [SerializeField] private Image gameOverCanvas;
     [SerializeField] private Text coinText;
-    [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private AudioSource Music;
     [SerializeField] private int speed;
-    private Rigidbody2D rb;
 
+    private int characterId;
     private int coins = 0;
     private bool gameOver;
 
+    private Rigidbody2D rb;
+    private void Awake()
+    {
+        characterId = PlayerPrefs.GetInt("character");
+        ChangeCharacterSkin(characterId);
+    }
+
+    private void ChangeCharacterSkin(int characterIndex)
+    {
+        if (characterIndex >= 0 && characterIndex < characterSprites.Count)
+        {
+            spriteRenderer.sprite = characterSprites[characterIndex];
+        }
+    }
     private void Start()
     {
         SetPosition();
         rb = GetComponent<Rigidbody2D>();
-        gameOverCanvas.SetActive(false);
+        gameOverCanvas.enabled =false;
     }
 
     private void Update()
@@ -31,7 +54,7 @@ public class MovePlayer : MonoBehaviour
 
                 if (touch.phase == TouchPhase.Began)
                 {
-                    SetPosition();
+                    CheckTouchPosition(touch.position);
                 }
             }
         }
@@ -57,8 +80,9 @@ public class MovePlayer : MonoBehaviour
         {
             if (collision.CompareTag("Enemy"))
             {
-                gameOverCanvas.SetActive(true);
+                gameOverCanvas.enabled = true;
                 gameOver = true;
+                Music.Stop();
             }
             else if (collision.CompareTag("Beer"))
             {
@@ -80,5 +104,24 @@ public class MovePlayer : MonoBehaviour
     public bool GameOver()
     {
         return gameOver;
+    }
+    private void CheckTouchPosition(Vector2 touchPosition)
+    {
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
+        if (touchPosition.y < screenHeight / 2)
+        {
+            Vector2 playerPosition = transform.position;
+            if (touchPosition.x > screenWidth / 2)
+            {
+                    transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
+                    GetComponent<SpriteRenderer>().flipY = true;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipY = false;
+                transform.position = new Vector3(leftWall.bounds.max.x, playerPosition.y);
+            }
+        }
     }
 }

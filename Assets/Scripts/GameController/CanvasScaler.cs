@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CanvasScaler : MonoBehaviour
 {
+    [Tooltip("Позиция объектов")]
     [SerializeField] private Vector3 baseScale = new Vector3(1f, 1f, 1f);
 
     void Start()

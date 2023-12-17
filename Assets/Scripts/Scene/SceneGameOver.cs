@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneGameOver : MonoBehaviour
 {
-    private MovePlayer player;
+    private PlayerController player;
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<MovePlayer>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
     private void Update()
     {
@@ -19,10 +19,14 @@ public class SceneGameOver : MonoBehaviour
                 {
                     if (touch.phase == TouchPhase.Began)
                     {
-                        SceneManager.LoadScene("MainMenu");
+                        LoadMainMenu();
                     }
                 }
             }
         }
+    }
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

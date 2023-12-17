@@ -27,14 +27,7 @@ public class EffectShake : MonoBehaviour
 
     void Start()
     {
-        if (gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(defoultScalePlayer());
-        }
-        else
-        {
-            Scale = transform.localScale;
-        }
+        StartCoroutine(ScaleObject());
     }
 
     IEnumerator ScalePlayer()
@@ -59,9 +52,9 @@ public class EffectShake : MonoBehaviour
         }
     }
 
-    IEnumerator defoultScalePlayer()
+    IEnumerator ScaleObject()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Scale = transform.localScale;
         yield return null;
     }

@@ -128,9 +128,6 @@ PrefabInstance:
       addedObject: {fileID: 3263388130422520002}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8397774597567795438}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3308390287901816679}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
 --- !u!1 &8300269644090062148 stripped
@@ -147,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8300269644090062148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfa8371c55dda3c44a30a2b6b0d9f90d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f1fa2b1b7c68d14cad0a07ae7a6f963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseScale: {x: 1, y: 1, z: 0}
@@ -237,6 +234,8 @@ MonoBehaviour:
   coinText: {fileID: 0}
   gameOverCanvas: {fileID: 0}
   speed: 2
+  spriteRenderer: {fileID: 0}
+  characterSprites: []
 --- !u!82 &8602996438770608719
 AudioSource:
   m_ObjectHideFlags: 0
@@ -365,36 +364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.135
   scaleDuration: 0.1
---- !u!114 &8397774597567795438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8300269644090062148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.000000029802322, y: -0.32000005, z: 0}
-  - {x: -0.000000029802322, y: 0.31999993, z: 0}
-  - {x: 0.5899999, y: 0.31999993, z: 0}
-  - {x: 0.5899999, y: -0.32000005, z: 0}
-  m_ShapePathHash: 0
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 50298
-  m_LocalBounds:
-    m_Center: {x: 0.29499993, y: -0.000000059604645, z: 0}
-    m_Extent: {x: 0.29499996, y: 0.32, z: 0}
 --- !u!50 &3308390287901816679
 Rigidbody2D:
   serializedVersion: 4

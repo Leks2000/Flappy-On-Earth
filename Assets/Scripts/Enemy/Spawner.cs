@@ -14,11 +14,11 @@ public class Spawner : MonoBehaviour
     private float timer;
     Vector2 spawnPosition;
 
-    private MovePlayer player;
+    private PlayerController player;
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<MovePlayer>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     private void Update()
