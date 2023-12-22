@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool gameOver;
 
     private Rigidbody2D rb;
+    [SerializeField] private SaveData save;
     private void Awake()
     {
         characterId = PlayerPrefs.GetInt("character");
@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         SetPosition();
         rb = GetComponent<Rigidbody2D>();
-        gameOverCanvas.enabled =false;
+        gameOverCanvas.enabled = false;
+        gameOver = false;
     }
 
     private void Update()
@@ -80,9 +81,11 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.CompareTag("Enemy"))
             {
+
                 gameOverCanvas.enabled = true;
                 gameOver = true;
                 Music.Stop();
+                save.AddCoins(coins);
             }
             else if (collision.CompareTag("Beer"))
             {
@@ -114,8 +117,8 @@ public class PlayerController : MonoBehaviour
             Vector2 playerPosition = transform.position;
             if (touchPosition.x > screenWidth / 2)
             {
-                    transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
-                    GetComponent<SpriteRenderer>().flipY = true;
+                transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
+                GetComponent<SpriteRenderer>().flipY = true;
             }
             else
             {

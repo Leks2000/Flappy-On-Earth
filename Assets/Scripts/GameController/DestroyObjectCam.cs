@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DestroyObject : MonoBehaviour
+public class DestroyObjectCam : MonoBehaviour
 {
     private Camera mainCamera;
 

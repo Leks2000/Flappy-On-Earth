@@ -1317,7 +1317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.124791645, y: 1}
-  m_AnchoredPosition: {x: 249.10019, y: -3}
+  m_AnchoredPosition: {x: 249.10046, y: -3}
   m_SizeDelta: {x: 958.8, y: 0.4}
   m_Pivot: {x: 0.00000010268141, y: 0.49999994}
 --- !u!114 &1127350381
@@ -1902,6 +1902,7 @@ GameObject:
   - component: {fileID: 1621327785}
   - component: {fileID: 1621327783}
   - component: {fileID: 1621327786}
+  - component: {fileID: 1621327787}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1994,6 +1995,18 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &1621327787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621327781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3a4674da53737438b3512deecfef13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1674564328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2415,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 1621327787}
+    - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: Music
       value: 
       objectReference: {fileID: 1776956457}
@@ -2431,7 +2448,7 @@ PrefabInstance:
       objectReference: {fileID: 1455516610472444463}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[0]
@@ -2448,11 +2465,23 @@ PrefabInstance:
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 807436179444780242, guid: 1a5788ca4753b6c43a89a20686d34f92, type: 3}
+      objectReference: {fileID: -7758132771002387148, guid: f74d78b6424faf848b63dc397b164284, type: 3}
+    - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: characterSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -7598212965231710603, guid: 9c4ae1c17a92f644d9b6f1455997f9e6, type: 3}
+    - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: characterSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 2401509968278890857, guid: 101c7b61ce228484aa27749f4704e124, type: 3}
     - target: {fileID: 2440213417068262088, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2646235857810076667, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
+    - target: {fileID: 3263388130422520002, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: scaleMultiplier
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3308390287901816679, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: m_Mass
       value: 0.0001
@@ -2543,7 +2572,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
-    - {fileID: 46683241036849424, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

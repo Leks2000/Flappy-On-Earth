@@ -110,9 +110,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 46683241036849424}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5557636206488730873}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
       insertIndex: -1
@@ -135,19 +132,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: c1572decb092eae4b9caf49655d7405c, type: 3}
   m_PrefabInstance: {fileID: 1407379366468248108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &46683241036849424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8300269644090062148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f1fa2b1b7c68d14cad0a07ae7a6f963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseScale: {x: 1, y: 1, z: 0}
 --- !u!68 &5557636206488730873
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -231,11 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftWall: {fileID: 0}
   rightWall: {fileID: 0}
-  coinText: {fileID: 0}
-  gameOverCanvas: {fileID: 0}
-  speed: 2
   spriteRenderer: {fileID: 0}
   characterSprites: []
+  gameOverCanvas: {fileID: 0}
+  coinText: {fileID: 0}
+  Music: {fileID: 0}
+  speed: 2
 --- !u!82 &8602996438770608719
 AudioSource:
   m_ObjectHideFlags: 0
