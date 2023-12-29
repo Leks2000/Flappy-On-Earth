@@ -1,38 +1,57 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour
 {
-    private GameObject ErrorConnection;
+    [Header("Network Settings")]
+    [Tooltip("Подключения")]
+    [SerializeField] private List<string> urlsToCheck = new List<string>();
+    [SerializeField] private Canvas ErrorConnection;
+    [SerializeField] private GameObject Player;
+
+    private string currentSceneIndex;
 
     void Start()
     {
         StartCoroutine(CheckInternetConnection());
+        currentSceneIndex = SceneManager.GetActiveScene().name;
     }
 
-    System.Collections.IEnumerator CheckInternetConnection()
+    IEnumerator CheckInternetConnection()
     {
         while (true)
         {
-            if (Application.internetReachability == NetworkReachability.NotReachable)
+            foreach (string url in urlsToCheck)
             {
-                var currentSceneIndex = SceneManager.GetActiveScene().name;
-                if (currentSceneIndex == "Game")
+                UnityWebRequest www = UnityWebRequest.Get(url);
+                yield return www.SendWebRequest();
+
+                if (www.result != UnityWebRequest.Result.Success)
                 {
-                    Time.timeScale = 0;
+                    HandleConnectionError();
                 }
-                ErrorConnection.SetActive(true);
             }
-            else
-            {
-                ErrorConnection.SetActive(false);
-            }
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2f);
         }
     }
+
+    void HandleConnectionError()
+    {
+        if (currentSceneIndex == "Game")
+        {
+            Time.timeScale = 0;
+            Player.GetComponentInChildren<AudioSource>().Stop();
+            Player.GetComponentInChildren<PlayerController>().enabled = false;
+        }
+        ErrorConnection.enabled = true;
+    }
+
     public void RestartGame()
     {
+        Application.
         SceneManager.LoadScene("MainMenu");
     }
 }
