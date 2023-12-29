@@ -5,23 +5,27 @@ using UnityEngine.UI;
 public class SkinChanger : MonoBehaviour
 {
     [Header("Shop Settings")]
-    [SerializeField] private Canvas CanvasShop;
-    [SerializeField] private Canvas CanvasMain;
+    [SerializeField] private Canvas canvasShop;
+    [SerializeField] private Canvas canvasMain;
     [Header("Skin Settings")]
     [SerializeField] private string objName;
     [SerializeField] private int id;
     [SerializeField] private int skinCost;
-    [SerializeField] private Text CostSkin;
+    [SerializeField] private Text costSkin;
+    [SerializeField] private ParticleSystem effectOpenSkin;
+    [SerializeField] private Text notificationText;
     [Header("Player Money Settings")]
     [SerializeField] private SaveData saveData;
     [SerializeField] private Text textMoney;
+
     private void Start()
     {
+        HideNotification();
         if (saveData.LoadPlayerData().purchasedSkins != null)
         {
             if (saveData.LoadPlayerData().purchasedSkins.Contains(id))
             {
-                CostSkin.enabled = false;
+                costSkin.enabled = false;
             }
         }
     }
@@ -33,10 +37,16 @@ public class SkinChanger : MonoBehaviour
     public void SaveIndex()
     {
         PlayerPrefs.SetInt(objName, id);
+        canvasShop.enabled = false;
+        canvasMain.enabled = true;
+    }
+    private void HideNotification()
+    {
+        notificationText.gameObject.SetActive(false);
     }
     public void OpenSkin()
     {
-        if (CostSkin.enabled)
+        if (costSkin.enabled)
         {
             if (saveData.LoadPlayerData().money >= skinCost)
             {
@@ -44,21 +54,19 @@ public class SkinChanger : MonoBehaviour
                 saveData.PurchaseSkin(id);
                 SaveIndex();
                 ShowMoney();
-                CostSkin.enabled = false;
+                costSkin.enabled = false;
                 Debug.Log("Skin opened!");
-                //добавить визуальное уведомление об открытии скина!
+                effectOpenSkin.Play();
             }
             else
             {
-                Debug.Log("Not enough money to open the skin!");
-                //добавить визуальное уведомление о нехватке денег!
+                notificationText.gameObject.SetActive(true);
+                Invoke("HideNotification", 2f);
             }
         }
-        else if (CostSkin == null || !CostSkin.enabled)
+        else if (!costSkin.enabled)
         {
             SaveIndex();
-            CanvasShop.enabled = false;
-            CanvasMain.enabled = true;
         }
     }
 }
