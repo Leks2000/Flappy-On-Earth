@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 20dbd5f69b65cc54f8ada8ddb37e1751
+guid: 46c988a02452fa146b639ce52685ff65
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ButtonShop
+  - name: Holy_Dog_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -2.4444444}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 9
-    spriteID: e7190b7f6b9ce41429b824b2e60e84d8
+      width: 64
+      height: 64
+    spriteID: 8ad1798ee0be5ba4db4862d62c5d509c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,18 +139,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ButtonShop_Frame_1
+  - name: Holy_Dog_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -2.4444444}
+    pivot: {x: 0.4827586, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 21
-      width: 32
-      height: 9
-    spriteID: 777b415b026696d45a1a47b2d9363a15
+      y: 76
+      width: 58
+      height: 64
+    spriteID: 06ae92eeca793ed4baff397643e94f9f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,35 +158,35 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 21}
+    uvTransform: {x: 4, y: 76}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1802433778
-    name: ButtonShop
+    guid: -656915123
+    name: Holy_Dog
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ButtonShop_Frame_0
+    - name: Holy_Dog_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
-        y: 22
-        width: 32
-        height: 9
-      spriteId: e7190b7f6b9ce41429b824b2e60e84d8
-    - name: ButtonShop_Frame_1
+        y: 0
+        width: 64
+        height: 64
+      spriteId: 8ad1798ee0be5ba4db4862d62c5d509c
+    - name: Holy_Dog_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
-        y: 22
-        width: 32
-        height: 9
-      spriteId: 777b415b026696d45a1a47b2d9363a15
+        x: 4
+        y: 0
+        width: 58
+        height: 64
+      spriteId: 06ae92eeca793ed4baff397643e94f9f
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Text coinText;
     [SerializeField] private AudioSource Music;
     [SerializeField] private int speed;
+    [SerializeField] private AudioSource AudioDead;
 
     private int characterId;
     private int coins = 0;
@@ -48,6 +49,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!gameOver)
         {
+            if (AudioDead.enabled)
+            {
+                AudioDead.Play();
+            }
             rb.MovePosition(rb.position + new Vector2(0, 1) * speed * Time.fixedDeltaTime);
             if (Input.touchCount > 0)
             {
@@ -57,6 +62,10 @@ public class PlayerController : MonoBehaviour
                 {
                     CheckTouchPosition(touch.position);
                 }
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                CheckMouseClickPosition(Input.mousePosition);
             }
         }
     }
@@ -100,7 +109,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = "Coins: " + coins.ToString();
+            coinText.text = "Кружок " + coins.ToString();
         }
     }
 
@@ -127,4 +136,26 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    private void CheckMouseClickPosition(Vector2 mousePosition)
+    {
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
+
+        if (mousePosition.y < screenHeight / 2)
+        {
+            Vector2 playerPosition = transform.position;
+
+            if (mousePosition.x > screenWidth / 2)
+            {
+                transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
+                GetComponent<SpriteRenderer>().flipY = true;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipY = false;
+                transform.position = new Vector3(leftWall.bounds.max.x, playerPosition.y);
+            }
+        }
+    }
+
 }

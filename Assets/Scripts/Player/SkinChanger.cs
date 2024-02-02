@@ -32,7 +32,7 @@ public class SkinChanger : MonoBehaviour
     public void ShowMoney()
     {
         int money = saveData.LoadPlayerData().money;
-        textMoney.text = $"Кружок имеется?: {money.ToString()}";
+        textMoney.text = (PlayerPrefs.GetInt("LanguageInd") == 0) ? $"Пиво имеется? {money}" : $"Have you some beer? {money}";
     }
     public void SaveIndex()
     {

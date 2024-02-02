@@ -253,6 +253,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 344177763}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &22408532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +740,8 @@ GameObject:
   - component: {fileID: 344177761}
   - component: {fileID: 344177760}
   - component: {fileID: 344177762}
+  - component: {fileID: 344177763}
+  - component: {fileID: 344177764}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -815,6 +829,115 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0
+--- !u!82 &344177763
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344177758}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a2beb2900fed86246a9458810237c5f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &344177764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344177758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7ffe67596ba464a822c46289990604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 344177763}
 --- !u!1 &365637663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,7 +1851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.124791645, y: 1}
-  m_AnchoredPosition: {x: 249.10004, y: -3}
+  m_AnchoredPosition: {x: 249.10034, y: -3}
   m_SizeDelta: {x: 22.9, y: 0.4}
   m_Pivot: {x: 0.00000010268141, y: 0.49999994}
 --- !u!114 &1127350381
@@ -2220,6 +2343,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1776956457}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 344177763}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: UnPause
         m_Mode: 1
@@ -3059,6 +3194,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1127350386}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: AudioDead
+      value: 
+      objectReference: {fileID: 344177763}
+    - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: rightWall
       value: 
       objectReference: {fileID: 1680247364}
@@ -3072,7 +3211,7 @@ PrefabInstance:
       objectReference: {fileID: 1455516610472444463}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[0]
@@ -3089,15 +3228,15 @@ PrefabInstance:
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[3]
       value: 
-      objectReference: {fileID: -7758132771002387148, guid: f74d78b6424faf848b63dc397b164284, type: 3}
+      objectReference: {fileID: 3150495108751844685, guid: d267bc549f56e5147928be6c4926038a, type: 3}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[4]
       value: 
-      objectReference: {fileID: -7598212965231710603, guid: 9c4ae1c17a92f644d9b6f1455997f9e6, type: 3}
+      objectReference: {fileID: 5015753231831380453, guid: bd4eca60a5ec6994c80606439f0ffb1e, type: 3}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: characterSprites.Array.data[5]
       value: 
-      objectReference: {fileID: 2401509968278890857, guid: 101c7b61ce228484aa27749f4704e124, type: 3}
+      objectReference: {fileID: -4646017464572145450, guid: 46c988a02452fa146b639ce52685ff65, type: 3}
     - target: {fileID: 2440213417068262088, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: m_Sprite
       value: 

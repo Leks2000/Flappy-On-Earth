@@ -23,6 +23,13 @@ public class SceneGameOver : MonoBehaviour
                     }
                 }
             }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                if (player != null)
+                {
+                    LoadMainMenu();
+                }
+            }
         }
     }
     public void LoadMainMenu()

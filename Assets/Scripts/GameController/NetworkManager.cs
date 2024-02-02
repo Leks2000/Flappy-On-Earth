@@ -51,7 +51,6 @@ public class NetworkManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Application.
         SceneManager.LoadScene("MainMenu");
     }
 }

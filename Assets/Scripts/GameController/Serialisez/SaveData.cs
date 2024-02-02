@@ -8,6 +8,7 @@ public class SaveData : MonoBehaviour
     [Header("Setting")]
     private string saveFilename = "PlayerCount";
     private string pathToSaveFile;
+    private int language;
 
     private void Awake()
     {
@@ -45,7 +46,7 @@ public class SaveData : MonoBehaviour
         }
         else
         {
-            return new GameData(0,new List<int>());
+            return new GameData(0,language,new List<int>());
         }
     }
     public void PurchaseSkin(int skinId)
@@ -61,5 +62,14 @@ public class SaveData : MonoBehaviour
     {
         GameData playerData = LoadPlayerData();
         SavePlayerData(playerData);
+    }
+    public int GetLanguageIndex()
+    {
+        return language;
+    }
+
+    public void SetLanguageIndex(int newLanguageIndex)
+    {
+        language = newLanguageIndex;
     }
 }
