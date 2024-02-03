@@ -63,10 +63,6 @@ public class PlayerController : MonoBehaviour
                     CheckTouchPosition(touch.position);
                 }
             }
-            else if (Input.GetMouseButtonDown(0))
-            {
-                CheckMouseClickPosition(Input.mousePosition);
-            }
         }
     }
 
@@ -136,26 +132,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void CheckMouseClickPosition(Vector2 mousePosition)
-    {
-        float screenWidth = Screen.width;
-        float screenHeight = Screen.height;
-
-        if (mousePosition.y < screenHeight / 2)
-        {
-            Vector2 playerPosition = transform.position;
-
-            if (mousePosition.x > screenWidth / 2)
-            {
-                transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
-                GetComponent<SpriteRenderer>().flipY = true;
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipY = false;
-                transform.position = new Vector3(leftWall.bounds.max.x, playerPosition.y);
-            }
-        }
-    }
-
 }
