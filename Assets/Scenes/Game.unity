@@ -241,8 +241,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1776956457}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+      - m_Target: {fileID: 4389984763347228066}
+        m_TargetAssemblyTypeName: RandomMusicPlayer, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -1740,7 +1740,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975956488}
-  - component: {fileID: 975956489}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -1763,19 +1762,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 841213678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &975956489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975956487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7ffe67596ba464a822c46289990604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 1776956457}
 --- !u!1 &1054480923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,9 +2481,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1776956457}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: UnPause
+      - m_Target: {fileID: 4389984763347228066}
+        m_TargetAssemblyTypeName: RandomMusicPlayer, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3484,6 +3470,10 @@ PrefabInstance:
       propertyPath: m_InstanceId
       value: -42124
       objectReference: {fileID: 0}
+    - target: {fileID: 8602996438770608719, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9141605532572163361, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3528,7 +3518,13 @@ PrefabInstance:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8300269644090062148, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4389984763347228066}
+    - targetCorrespondingSourceObject: {fileID: 8300269644090062148, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4389984763347228072}
   m_SourcePrefab: {fileID: 100100000, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
 --- !u!212 &1455516610472444463 stripped
 SpriteRenderer:
@@ -3546,6 +3542,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156857fbe7672174db1d54aff5dc77a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4389984763347228066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029850743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56b4abeba56778429cfaa9c086c19a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTracks:
+  - {fileID: 8300000, guid: 14fbc6dba61e8404c8781ceb1ede75ec, type: 3}
+  - {fileID: 8300000, guid: d7730c9c79ad9584489da8f1913e94be, type: 3}
+  - {fileID: 8300000, guid: 87c4526ed67d27f48a800c2db279db5a, type: 3}
+  - {fileID: 8300000, guid: 5e2570918d997b048949c85bb3e4bba5, type: 3}
+  audioSource: {fileID: 1776956457}
+--- !u!114 &4389984763347228072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029850743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7ffe67596ba464a822c46289990604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1776956457}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
