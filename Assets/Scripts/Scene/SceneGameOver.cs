@@ -12,15 +12,11 @@ public class SceneGameOver : MonoBehaviour
     {
         if (player.GameOver())
         {
-            if (Input.touchCount > 0)
+            if (Input.GetMouseButtonDown(0))
             {
-                Touch touch = Input.GetTouch(0);
                 if (player != null)
                 {
-                    if (touch.phase == TouchPhase.Began)
-                    {
-                        LoadMainMenu();
-                    }
+                    LoadMainMenu();
                 }
             }
         }
