@@ -18,10 +18,7 @@ public class RandomMusicPlayer : MonoBehaviour
         {
             int randomIndex = Random.Range(0, musicTracks.Length);
             audioSource.clip = musicTracks[randomIndex];
-            if (audioSource.enabled)
-            {
-                audioSource.Play();
-            }
+            Play();
         }
     }
     void Update()
