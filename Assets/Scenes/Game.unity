@@ -1917,7 +1917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.124791645, y: 1}
-  m_AnchoredPosition: {x: 243.4, y: -1}
+  m_AnchoredPosition: {x: 243.40015, y: -1}
   m_SizeDelta: {x: 8.8, y: 0.4}
   m_Pivot: {x: 0.00000010268141, y: 0.49999994}
 --- !u!114 &1127350381
@@ -3032,7 +3032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87260425, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000045776, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.000030518, y: 0}
   m_Pivot: {x: 0.00000008940697, y: 0.5}
 --- !u!114 &1680247359
@@ -3442,12 +3442,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4646017464572145450, guid: 46c988a02452fa146b639ce52685ff65, type: 3}
     - target: {fileID: 1068347704865705904, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068347704865705904, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1776956457}
     - target: {fileID: 1068347704865705904, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: spectrumSize
-      value: 4096
+      value: 8192
       objectReference: {fileID: 0}
     - target: {fileID: 1068347704865705904, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: beatThreshold
@@ -3469,6 +3473,14 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1776956457}
+    - target: {fileID: 3263388130422520002, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: myAudioSource
+      value: 
+      objectReference: {fileID: 1776956457}
+    - target: {fileID: 3263388130422520002, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+      propertyPath: myMusicAnalyzer
+      value: 
+      objectReference: {fileID: 4389984763347228076}
     - target: {fileID: 3263388130422520002, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: scaleMultiplier
       value: 1.35
@@ -3628,6 +3640,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1776956457}
+--- !u!114 &4389984763347228076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1068347704865705904, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+  m_PrefabInstance: {fileID: 1455516610472444462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029850743}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e175143cd372c48a607bdb73e1c261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

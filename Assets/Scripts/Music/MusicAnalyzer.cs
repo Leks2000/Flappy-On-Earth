@@ -37,7 +37,6 @@ public class MusicAnalyzer : MonoBehaviour
     }
     private void BeatDealay()
     {
-        PlayerPrefs.SetInt("Play", 1);
         int Index = PlayerPrefs.GetInt("IndexMusic");
         switch (Index)
         {
@@ -53,7 +52,7 @@ public class MusicAnalyzer : MonoBehaviour
                 break;
             case 2:
                 {
-                    beatThreshold = 0.05f;
+                    beatThreshold = 0.04f;
                 }
                 break;
             case 3:
@@ -62,7 +61,6 @@ public class MusicAnalyzer : MonoBehaviour
                 }
              break;
         }
-        PlayerPrefs.SetInt("Play", 0);
     }
     void AnalyzeSpectrum()
     {

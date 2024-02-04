@@ -7,6 +7,8 @@ public class EffectShake : MonoBehaviour
     private Vector3 scale;
     [SerializeField] private float scaleMultiplier = 1.35f;
     [SerializeField] private float scaleDuration = 0.1f;
+    public AudioSource myAudioSource;
+    [SerializeField] private MusicAnalyzer myMusicAnalyzer;
 
     private void OnEnable()
     {
@@ -29,7 +31,7 @@ public class EffectShake : MonoBehaviour
                 break;
             case 1:
                 scaleMultiplier = 1.4f;
-                scaleDuration = 0.03f;
+                scaleDuration = 0.025f;
                 break;
             case 2:
                 scaleMultiplier = 1.5f;
@@ -51,14 +53,20 @@ public class EffectShake : MonoBehaviour
     void Start()
     {
         StartCoroutine(ScaleObject());
-        if (PlayerPrefs.GetInt("Play") == 1)
+        if (myMusicAnalyzer != null)
         {
-            SetMusic();
+            if (!myMusicAnalyzer.enabled)
+            {
+                myMusicAnalyzer.enabled = true;
+            }
         }
+
+        Invoke("SetMusic", 0.1f);
     }
+
     void Update()
     {
-        if (PlayerPrefs.GetInt("Play") == 1)
+        if (myAudioSource != null && !myAudioSource.isPlaying)
         {
             SetMusic();
         }

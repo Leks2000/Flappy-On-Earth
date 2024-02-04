@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_FlipY
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_Color.b
@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6069683
+      value: 0.6883937
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.993067
+      value: 18.291533
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.z
@@ -161,6 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.35
   scaleDuration: 0.1
+  myAudioSource: {fileID: 8602996438770608719, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
+  myMusicAnalyzer: {fileID: 0}
 --- !u!114 &4805853019862892639
 MonoBehaviour:
   m_ObjectHideFlags: 0

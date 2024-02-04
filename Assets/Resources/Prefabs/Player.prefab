@@ -334,12 +334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e175143cd372c48a607bdb73e1c261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  spectrumSize: 0
+  audioSource: {fileID: 8602996438770608719}
+  spectrumSize: 4096
   beatThreshold: 0
   sensitivity: 0
-  lowFrequencyThreshold: 0
-  highFrequencyThreshold: 0
+  lowFrequencyThreshold: 160
+  highFrequencyThreshold: 600
 --- !u!114 &3263388130422520002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.35
   scaleDuration: 0.1
-  audioSource: {fileID: 0}
+  myAudioSource: {fileID: 8602996438770608719}
 --- !u!50 &3308390287901816679
 Rigidbody2D:
   serializedVersion: 4
