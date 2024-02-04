@@ -23,14 +23,45 @@ public class MusicAnalyzer : MonoBehaviour
     void Start()
     {
         spectrumData = new float[spectrumSize];
+        BeatDealay();
     }
 
     void Update()
     {
         audioSource.GetSpectrumData(spectrumData, 0, FFTWindow.BlackmanHarris);
         AnalyzeSpectrum();
+        if (!audioSource.isPlaying)
+        {
+            BeatDealay();
+        }
     }
-
+    private void BeatDealay()
+    {
+        int Index = PlayerPrefs.GetInt("IndexMusic");
+        switch (Index)
+        {
+            case 0:
+                {
+                    beatThreshold = 0.04f;
+                }
+                break;
+            case 1:
+                {
+                    beatThreshold = 0.005f;
+                }
+                break;
+            case 2:
+                {
+                    beatThreshold = 0.05f;
+                }
+                break;
+            case 3:
+                {
+                    beatThreshold = 0.005f;
+                }
+             break;
+        }
+    }
     void AnalyzeSpectrum()
     {
         float currentVolume = audioSource.volume;

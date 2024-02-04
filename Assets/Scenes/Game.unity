@@ -3360,7 +3360,7 @@ PrefabInstance:
       objectReference: {fileID: 1776956457}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 596408716082712872, guid: b7ceb0a87fa2a0a4da1c878da5bde27d, type: 3}
       propertyPath: coinText
@@ -3555,10 +3555,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicTracks:
+  - {fileID: 8300000, guid: 5e2570918d997b048949c85bb3e4bba5, type: 3}
   - {fileID: 8300000, guid: 14fbc6dba61e8404c8781ceb1ede75ec, type: 3}
   - {fileID: 8300000, guid: d7730c9c79ad9584489da8f1913e94be, type: 3}
   - {fileID: 8300000, guid: 87c4526ed67d27f48a800c2db279db5a, type: 3}
-  - {fileID: 8300000, guid: 5e2570918d997b048949c85bb3e4bba5, type: 3}
   audioSource: {fileID: 1776956457}
 --- !u!114 &4389984763347228072
 MonoBehaviour:

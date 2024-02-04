@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
 
     private void SpawnBeer(float lastEnemy, bool flip)
     {
-        Vector2 beerPosition = new Vector2(lastEnemy, spawnPosition.y + 0.5f);
+        Vector2 beerPosition = new Vector2(lastEnemy, spawnPosition.y + 0.8f);
         beer.GetComponent<SpriteRenderer>().flipY = flip;
         Instantiate(beer, beerPosition, beer.transform.rotation);
     }
