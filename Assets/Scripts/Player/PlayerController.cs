@@ -53,11 +53,16 @@ public class PlayerController : MonoBehaviour
             {
                 AudioDead.Play();
             }
-            if (Input.GetMouseButtonDown(0))
-            {
-                CheckMouseClickPosition(Input.mousePosition);
-            }
             rb.MovePosition(rb.position + new Vector2(0, 1) * speed * Time.fixedDeltaTime);
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    CheckTouchPosition(touch.position);
+                }
+            }
         }
     }
 
@@ -108,16 +113,14 @@ public class PlayerController : MonoBehaviour
     {
         return gameOver;
     }
-    private void CheckMouseClickPosition(Vector2 mousePosition)
+    private void CheckTouchPosition(Vector2 touchPosition)
     {
         float screenWidth = Screen.width;
         float screenHeight = Screen.height;
-
-        if (mousePosition.y < screenHeight / 2)
+        if (touchPosition.y < screenHeight / 2)
         {
             Vector2 playerPosition = transform.position;
-
-            if (mousePosition.x > screenWidth / 2)
+            if (touchPosition.x > screenWidth / 2)
             {
                 transform.position = new Vector3(rightWall.bounds.min.x, playerPosition.y);
                 GetComponent<SpriteRenderer>().flipY = true;
@@ -129,5 +132,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
 }

@@ -7,7 +7,6 @@ public class EffectShake : MonoBehaviour
     private Vector3 scale;
     [SerializeField] private float scaleMultiplier = 1.35f;
     [SerializeField] private float scaleDuration = 0.1f;
-    [SerializeField] private AudioSource audioSource;
 
     private void OnEnable()
     {
