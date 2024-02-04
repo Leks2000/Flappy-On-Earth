@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_FlipY
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_Color.b
@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6848145
+      value: -0.6069683
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.035128
+      value: 12.993067
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.z
@@ -161,7 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.35
   scaleDuration: 0.1
-  audioSource: {fileID: 0}
 --- !u!114 &4805853019862892639
 MonoBehaviour:
   m_ObjectHideFlags: 0
