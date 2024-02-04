@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSettings : MonoBehaviour
 {
@@ -11,10 +12,9 @@ public class GameSettings : MonoBehaviour
 
     public void ApplySavedSettings()
     {
-        bool isSoundOn = PlayerPrefs.GetInt("SoundOn", 1) == 1;
         float volumeMultiplier = PlayerPrefs.GetFloat("VolumeMultiplier", 1.0f);
-        audioSource.enabled = isSoundOn;
         audioSource.volume = volumeMultiplier;
+        audioSource.enabled = volumeMultiplier <= 0 ? false : true;
     }
     public void Play()
     {

@@ -55,7 +55,6 @@ public class SkinChanger : MonoBehaviour
                 SaveIndex();
                 ShowMoney();
                 costSkin.enabled = false;
-                Debug.Log("Skin opened!");
                 effectOpenSkin.Play();
             }
             else
