@@ -21,6 +21,7 @@ public class NetworkManager : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         StartCoroutine(CheckInternetConnection());
         currentSceneIndex = SceneManager.GetActiveScene().name;
     }
