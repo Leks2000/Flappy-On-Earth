@@ -3,6 +3,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class NetworkManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class NetworkManager : MonoBehaviour
     [SerializeField] private List<string> urlsToCheck = new List<string>();
     [SerializeField] private Canvas ErrorConnection;
     [SerializeField] private GameObject Player;
+    [SerializeField] private Text Error;
+    [SerializeField] private Text Mess;
+    [SerializeField] private Text TryAgain;
+
 
     private string currentSceneIndex;
 
@@ -40,6 +45,19 @@ public class NetworkManager : MonoBehaviour
 
     void HandleConnectionError()
     {
+        if (Error != null)
+        {
+            Error.text = (PlayerPrefs.GetInt("LanguageInd") == 0 ? "Отсутсвует подключение к интернету. Проверьте подключение к интернету и попробуйте снова." : "No internet connection. Check your internet connection and try again.");
+        }
+
+        if (Mess != null)
+        {
+            Mess.text = (PlayerPrefs.GetInt("LanguageInd") == 0 ? "Ошибка подключения" : "Connection error");
+        }
+        if (TryAgain != null)
+        {
+            TryAgain.text = (PlayerPrefs.GetInt("LanguageInd") == 0 ? "Попробовать снова" : "Try again");
+        }
         if (currentSceneIndex == "Game")
         {
             Time.timeScale = 0;

@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_FlipY
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_Color.b
@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.63111
+      value: 2.6848145
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.983354
+      value: 9.035128
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: fbd67614b34cd4c49884a967c8c1b331, type: 3}
       propertyPath: m_LocalPosition.z
