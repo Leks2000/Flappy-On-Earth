@@ -139,7 +139,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   bundleVersion: 1.0
   preloadedAssets:
-  - {fileID: 8300000, guid: 4b6ee274bef37fb4da075ab0dfebd34c, type: 3}
+  - {fileID: 102900000, guid: 0bce5ec1314137e479ab844e8199e6e0, type: 3}
   - {fileID: 102900000, guid: 3fc8acdd13e6c734bafef6554d6fdbcd, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,7 +161,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Xedanler.FlappyOnEarth
-    Standalone: com.DefaultCompany.2DProject
+    Standalone: com.Xedanler.Flappy-On-Earth
   buildNumber:
     Standalone: 0
     VisionOS: 0
