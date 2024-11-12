@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = "Кружок " + coins.ToString();
+            coinText.text = "кружок " + coins.ToString();
         }
     }
 
